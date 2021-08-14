@@ -11,8 +11,8 @@
 
 add_action( 'init', 'wpse_393178_load_textdomain' );
 function wpse_393178_load_textdomain() {
-	load_plugin_textdomain( 'wpse-393178', false,
-		dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+// verify if the text domain load succeeded
+	if ( ! load_plugin_textdomain( 'wpse-393178', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ) ) { echo "ohoh!"; } 
 }
 
 // Helper function to output a notice div.
